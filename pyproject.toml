@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "pytest-notimplemented"
+version = "0.1.0"
+description = "Pytest markers for not implemented features and tests."
+license = "GPL-3.0-or-later"
+authors = ["Damien Flament <damien.flament@gmx.com>"]
+repository = "https://github.com/neimad/pytest-notimplemented"
+readme = "README.md"
+
+keywords = ["pytest", "plugin", "marker", "skip", "implemented"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Framework :: Pytest",
+    "Topic :: Software Development :: Testing"
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pytest = "^5.1"
+
+[tool.poetry.dev-dependencies]
+invoke = "^1.3"
+black = {version = "^19", allows-prereleases = true}
+flake8 = "^3.7"
+flake8-bugbear = "^19.8"
+flake8-docstrings = "^1.4"
+flake8-import-order = "^0.18.1"
+pdoc3 = "^0.6.3"
+
+[tool.poetry.plugins."pytest11"]
+"notimplemented" = "pytest_notimplemented"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

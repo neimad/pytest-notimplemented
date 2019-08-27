@@ -1,4 +1,4 @@
-"""Development tasks."""
+"""Usefull tasks to `invoke` when developing."""
 
 from pathlib import Path
 
@@ -27,6 +27,12 @@ def lint(c):
 
 
 @task
+def check(c):
+    """Checks the plugin"""
+    c.run("pytest", hide="out")
+
+
+@task
 def readme(c):
     """Generates the readme"""
     module = get_module_doc()
@@ -36,7 +42,7 @@ def readme(c):
     README_TARGET.write_text("\n".join([title, "=" * len(title), module.docstring]))
 
 
-@task(lint, readme, name="pre-commit")
+@task(lint, check, readme, name="pre-commit")
 def pre_commit(c):
     """Run tasks required for commiting"""
     c.run(f"git add {README_TARGET}")

@@ -1,1 +1,8 @@
 __pycache__/
+
+# Poetry
+/*.egg-info/
+/pip-wheel-metadata/
+
+# Testing
+/.pytest_cache

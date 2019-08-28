@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright © 2019 Damien Flament
+# This file is part of pytest-notimplemented.
+
 """A pytest plugin providing a marker for not implemented features and tests.
 
 @mark.notimplemented

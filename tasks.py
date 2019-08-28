@@ -1,3 +1,7 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright © 2019 Damien Flament
+# This file is part of pytest-notimplemented.
+
 """Usefull tasks to `invoke` when developing."""
 
 from pathlib import Path
